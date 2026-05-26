@@ -20,7 +20,7 @@ public class DemoController {
 	public String getMyName(@RequestParam(value="keyword", required=false) String keyword, Model model) {
 		
 		model.addAttribute("myKeyword", keyword);
-		model.addAttribute("myStudents", service.get());
+		model.addAttribute("myStudents", service.get(keyword));
 		
 		return "index";
 	}
