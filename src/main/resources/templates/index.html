@@ -1,0 +1,25 @@
+<html>
+<head></head>
+<body>
+<p>My name is Omer Pitou Ntumba</p>
+<p th:text="${myKeyword}"></p>
+
+	<table id="myTableX" class="table table-dashboard mb-0 fs-10">
+		<thead class="visually-hidden">
+			<tr>
+				<th>Nom</th>
+				<th>Postnom</th>
+				<th>Prenom</th>
+			</tr>
+		</thead>
+			<tr th:each="item : ${myStudents}">
+				<td th:text="${item.nom}"></td>
+				<td th:text="${item.postnom}"></td>
+				<td th:text="${item.prenom}"></td>
+			</tr>
+		<tbody>
+		</tbody>
+	</table>
+
+</body>
+</html>
